@@ -421,6 +421,7 @@ def build(args):
             "-DArgumentParser_DIR=" + os.path.join(args.build_dirs["swift-argument-parser"], "cmake/modules"),
             "-DSwiftDriver_DIR=" + os.path.join(args.build_dirs["swift-driver"], "cmake/modules"),
             "-DSwiftToolsProtocols_DIR=" + os.path.join(args.build_dirs["swift-tools-protocols"], "cmake/modules"),
+            "-DSwiftCollections_DIR=" + os.path.join(args.build_dirs["swift-collections"], "cmake/modules"),
         ]
         build_dependency(args, "swift-build", swift_build_cmake_flags)
         build_swiftpm_with_cmake(args)
